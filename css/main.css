@@ -32,11 +32,8 @@ header {
     
 }
 
-h2 {
+h2, h3, h4 {
     padding-top: 1em;
-}
-
-h3, h4, h5 {
     padding-bottom: 1em;
 }
 
@@ -81,13 +78,16 @@ main {
     padding: var(--main-padding);    
 }
 
-.main .flex-wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
+main .flex-wrapper {
+    min-width: 0;
 }
-
-
+/* Add this style to handle the shrinking of the images within the flex-wrapper */
+main img.first_img,
+main img.second_img {
+    width: 100%; /* Ensure the images do not exceed their container width */
+    max-width: 100%;
+    height: auto;
+}
 
 main p, aside p, table, table * {
     padding: .5%;
@@ -95,7 +95,13 @@ main p, aside p, table, table * {
     margin-left: 1rem;
 }
 
-main img {
+main .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+main img, aside img {
     max-height: 15%;
     padding: 1.5% 1.5%;
 }
@@ -103,6 +109,11 @@ main img {
 .img-container {
     text-align: center;
     margin: 0 auto; /* center img container within flex container */
+}
+
+.photo-rights {
+    font-style: italic;
+    font-size: 14px;
 }
 
 div > .img-container {
@@ -117,14 +128,10 @@ div > .img-container {
     margin: 0 auto; /* Center the image within the container */
   }
 
-.img-container p, .aside-attribution {
+.img-container p {
     max-width: 100%; /* Ensure the paragraph does not exceed the width of the container */
     margin: 10px 0; /* Optional: Adjust margin as needed */
-    font-size: 14px;
-    font-style: italic;
   }
-
-
 
 main ul {
     white-space: nowrap;
@@ -132,16 +139,15 @@ main ul {
     align-self: center;
 }
 
+main ul li {
+    text-transform: uppercase;
+}
+
 aside {
     background: #e9c46a;
     grid-area: aside;
     border-radius: var(--main-radius);
     padding: var(--main-padding);
-    
-}
-
-#potato {
-    max-width: 65%;
 }
 
 table {
@@ -149,14 +155,14 @@ table {
     border-spacing: 0;
     border-collapse: separate;
     margin-bottom: 5px;
+    border: 2px solid #004d40;
 }
-
 
 th, td {
     padding: 8px;
     text-align: center;
+    border: 1px solid #004d40;
 }
-
   
 caption {
     background-color: #e9c46a;
@@ -211,8 +217,6 @@ footer {
     background-color: #f4a261;
 }
 
-
-
 @media only screen and (max-width: 550px) {
     .wrapper{
         grid-template-columns: 1fr;
@@ -223,8 +227,5 @@ footer {
         "main"
         "aside"
         "footer";
-    }
-    main ul {
-        white-space: normal;
     }
 }
