@@ -1,6 +1,6 @@
-:root{
-    --main-radius: 5px;
-    --main-padding: 2.5px;
+header, nav, main, aside, footer {
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
 }
 
 * {
@@ -8,8 +8,9 @@
 }
 .wrapper {
     display: grid;
+    min-width: 400px;
     height: 100vh;
-    grid-template-columns: 8fr 7fr;
+    grid-template-columns: minmax(0, 8fr) minmax(0, 7fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
     "header header"
@@ -78,18 +79,17 @@ main {
     padding: var(--main-padding);    
 }
 
-main .flex-wrapper {
-    min-width: 0;
-}
-/* Add this style to handle the shrinking of the images within the flex-wrapper */
 main img.first_img,
-main img.second_img {
-    width: 100%; /* Ensure the images do not exceed their container width */
+main img.second_img,
+aside img {
+    width: 100%;
     max-width: 100%;
     height: auto;
 }
 
-main p, aside p, table, table * {
+main p,
+aside p,
+.table-container p {
     padding: .5%;
     margin-right: 1rem;
     margin-left: 1rem;
@@ -101,14 +101,28 @@ main .flex-wrapper {
     max-width: 100%;
 }
 
-main img, aside img {
+main img, 
+aside img {
     max-height: 15%;
     padding: 1.5% 1.5%;
 }
 
 .img-container {
     text-align: center;
-    margin: 0 auto; /* center img container within flex container */
+    margin: 0 auto;
+}
+
+.img-container p {
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+.first_img,
+.second_img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .photo-rights {
@@ -117,21 +131,8 @@ main img, aside img {
 }
 
 div > .img-container {
-    max-width: 90%;
+    max-width: 85%;
 }
-
-.first_img,
-.second_img {
-    max-width: 90%; /* Ensure the image does not exceed its natural width */
-    height: auto; /* Maintain the image's aspect ratio */
-    display: block; /* Remove any default inline styling on the image */
-    margin: 0 auto; /* Center the image within the container */
-  }
-
-.img-container p {
-    max-width: 100%; /* Ensure the paragraph does not exceed the width of the container */
-    margin: 10px 0; /* Optional: Adjust margin as needed */
-  }
 
 main ul {
     white-space: nowrap;
@@ -151,11 +152,23 @@ aside {
 }
 
 table {
-    width: 95%;
+    width: 85%;
+    margin: 0 auto;
     border-spacing: 0;
     border-collapse: separate;
     margin-bottom: 5px;
     border: 2px solid #004d40;
+}
+
+caption {
+    background-color: #e9c46a;
+    padding: 8px;
+    caption-side: top;
+    text-align: center;
+}
+
+th {
+    background-color: #a8dadc;
 }
 
 th, td {
@@ -163,17 +176,7 @@ th, td {
     text-align: center;
     border: 1px solid #004d40;
 }
-  
-caption {
-    background-color: #e9c46a;
-    padding: 8px;
-    caption-side: top;
-}
-  
-th {
-    background-color: #a8dadc;
-}
-  
+
 tr:nth-child(even) {
     background-color: #f4a261;
 }
@@ -227,5 +230,21 @@ footer {
         "main"
         "aside"
         "footer";
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    main, aside {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 748px) {
+    body {
+        overflow-x: hidden;
     }
 }
