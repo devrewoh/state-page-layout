@@ -11,14 +11,13 @@ header, nav, main, aside, footer {
     min-width: 400px;
     height: 100vh;
     grid-template-columns: minmax(0, 8fr) minmax(0, 7fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
     "header header"
     "nav nav"
     "main aside"
     "footer footer"
     "fake-footer fake-footer";
-    
     grid-gap: 0.2rem;
     font-family:'Quicksand', Arial, sans-serif;
     font-weight: 800;
@@ -223,11 +222,11 @@ footer {
 }
 
 div.fake-footer {
-    grid-area: fake-footer; /* Assign to the same grid area as your footer in the wrapper */
-    background: #e76f51; /* Inherit background color from the footer */
-    color: white; /* Set text color */
-    padding: .5em 1em; /* Set padding */
-    border-radius: var(--main-radius); /* Inherit border radius from the wrapper */
+    grid-area: fake-footer;
+    background: #e76f51; /* Consistent with the footer background */
+    color: white;
+    padding: var(--main-padding); /* Consistent padding */
+    border-radius: var(--main-radius); /* Consistent border-radius */
 }
 
 div.fake-footer .rubric-requirements img#rubric-image {
@@ -249,7 +248,7 @@ div.fake-footer .rubric-requirements p {
 @media only screen and (max-width: 550px) {
     .wrapper{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
         "header"
         "nav"
