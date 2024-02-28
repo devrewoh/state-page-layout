@@ -16,7 +16,9 @@ header, nav, main, aside, footer {
     "header header"
     "nav nav"
     "main aside"
-    "footer footer";
+    "footer footer"
+    "fake-footer fake-footer";
+    
     grid-gap: 0.2rem;
     font-family:'Quicksand', Arial, sans-serif;
     font-weight: 800;
@@ -38,7 +40,7 @@ h2, h3, h4 {
     padding-bottom: 1em;
 }
 
-#logo-image {
+#logo-image, #rubric-image {
     max-height: 15vh;
 }
 
@@ -220,6 +222,30 @@ footer {
     background-color: #f4a261;
 }
 
+div.fake-footer {
+    grid-area: fake-footer; /* Assign to the same grid area as your footer in the wrapper */
+    background: #e76f51; /* Inherit background color from the footer */
+    color: white; /* Set text color */
+    padding: .5em 1em; /* Set padding */
+    border-radius: var(--main-radius); /* Inherit border radius from the wrapper */
+}
+
+div.fake-footer .rubric-requirements img#rubric-image {
+    /* Float the image to the right */
+    width: 40%;
+    float: right;
+    margin-left: 10px; /* Add some margin for spacing */
+}
+
+div.fake-footer .rubric-requirements p {
+    /* Other styles for the paragraph */
+    /* Make sure the paragraph does not wrap around the floated image */
+    overflow: hidden;
+    max-width: 55%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 @media only screen and (max-width: 550px) {
     .wrapper{
         grid-template-columns: 1fr;
@@ -229,7 +255,8 @@ footer {
         "nav"
         "main"
         "aside"
-        "footer";
+        "footer"
+        "fake-footer";
     }
 }
 
