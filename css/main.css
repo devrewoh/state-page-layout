@@ -221,29 +221,37 @@ footer {
     background-color: #f4a261;
 }
 
-div.fake-footer {
+.fake-footer {
     grid-area: fake-footer;
-    background: #e76f51; /* Consistent with the footer background */
-    color: white;
-    padding: var(--main-padding); /* Consistent padding */
-    border-radius: var(--main-radius); /* Consistent border-radius */
+}
+.fake-content {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
 }
 
-div.fake-footer .rubric-requirements img#rubric-image {
-    /* Float the image to the right */
-    width: 40%;
-    float: right;
-    margin-left: 10px; /* Add some margin for spacing */
+.fake-content > ol {
+    float: right; /* Float the list to the right */
+    margin-left: 10px; /* Add some margin to the left of the list */
+}
+.fake-content > ol li {
+    margin-bottom: 10px; /* Add some space between list items */
 }
 
-div.fake-footer .rubric-requirements p {
-    /* Other styles for the paragraph */
-    /* Make sure the paragraph does not wrap around the floated image */
-    overflow: hidden;
-    max-width: 55%;
-    padding-left: 15px;
-    padding-right: 15px;
+.fake-content p {
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
+
+.fake-footer img {
+    margin-top: 5px;
+}
+
+.fake-content p + p {
+    clear: both;
+}
+
 
 @media only screen and (max-width: 550px) {
     .wrapper{
