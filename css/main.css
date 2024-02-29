@@ -1,4 +1,4 @@
-header, nav, main, aside, footer {
+header, nav, main, aside, footer, .fake-footer {
     border-radius: var(--main-radius);
     padding: var(--main-padding);
 }
@@ -220,38 +220,34 @@ footer {
 .newsletter-form button:hover {
     background-color: #f4a261;
 }
-
+div.fake-footer {
+    background: gold;
+}
 .fake-footer {
     grid-area: fake-footer;
 }
 .fake-content {
     max-width: 600px;
-    width: 100%;
+    /* width: 100%;  -- NO NOTICABLE CHANGE TURNING OFF*/
     margin: 0 auto;
     padding: 5px;
 }
 
-.fake-content > ol {
-    float: right; /* Float the list to the right */
-    margin-left: 10px; /* Add some margin to the left of the list */
-}
-.fake-content > ol li {
-    margin-bottom: 10px; /* Add some space between list items */
+.fake-content p {
+    max-width: 100%;
 }
 
-.fake-content p {
-    margin-left: 20px;
-    margin-bottom: 10px;
+.fake-content > ol {
+    float: right; /* Float the list to the right */
 }
+.fake-content > ol li {
+    margin-bottom: 5px; /* Add some space between list items */
+}
+
 
 .fake-footer img {
     margin-top: 5px;
 }
-
-.fake-content p + p {
-    clear: both;
-}
-
 
 @media only screen and (max-width: 550px) {
     .wrapper{
