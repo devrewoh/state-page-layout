@@ -39,7 +39,7 @@ h2, h3, h4 {
     padding-bottom: 1em;
 }
 
-#logo-image, #rubric-image {
+#logo-image {
     max-height: 15vh;
 }
 
@@ -221,16 +221,19 @@ footer {
     background-color: #f4a261;
 }
 div.fake-footer {
-    background: gold;
+    background: goldenrod;
 }
 .fake-footer {
     grid-area: fake-footer;
+    position: relative;
+    
 }
 .fake-content {
     max-width: 600px;
-    /* width: 100%;  -- NO NOTICABLE CHANGE TURNING OFF*/
     margin: 0 auto;
     padding: 5px;
+    
+    
 }
 
 .fake-content p {
@@ -238,15 +241,19 @@ div.fake-footer {
 }
 
 .fake-content > ol {
-    float: right; /* Float the list to the right */
+    float: right;
+    
+    
 }
 .fake-content > ol li {
-    margin-bottom: 5px; /* Add some space between list items */
+    margin-bottom: 5px;
 }
 
-
-.fake-footer img {
-    margin-top: 5px;
+#rubric-image {
+    position: absolute;
+    max-height: 10vh;
+    bottom: 5px;
+    left: 47.5%;
 }
 
 @media only screen and (max-width: 550px) {
