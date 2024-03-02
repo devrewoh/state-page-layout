@@ -11,12 +11,12 @@ header, nav, main, aside, footer, .fake-footer {
     display: grid;
     min-width: 400px;
     height: 100vh;
-    grid-template-columns: minmax(0, 8fr) minmax(0, 7fr);
+    grid-template-columns: minmax(0, 7fr) minmax(0, 8fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
     "header header"
     "nav nav"
-    "main aside"
+    "aside main"
     "footer footer"
     "fake-footer fake-footer";
     grid-gap: 0.2rem;
