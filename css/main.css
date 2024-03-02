@@ -5,6 +5,7 @@ header, nav, main, aside, footer, .fake-footer {
 
 * {
     margin: .1em;
+    
 }
 .wrapper {
     display: grid;
@@ -31,7 +32,6 @@ header {
     grid-area: header;
     border-radius: var(--main-radius);
     padding: var(--main-padding);
-    
 }
 
 h2, h3, h4 {
@@ -226,14 +226,11 @@ div.fake-footer {
 .fake-footer {
     grid-area: fake-footer;
     position: relative;
-    
 }
 .fake-content {
     max-width: 600px;
     margin: 0 auto;
     padding: 5px;
-    
-    
 }
 
 .fake-content p {
@@ -242,8 +239,6 @@ div.fake-footer {
 
 .fake-content > ol {
     float: right;
-    
-    
 }
 .fake-content > ol li {
     margin-bottom: 5px;
@@ -252,12 +247,12 @@ div.fake-footer {
 #rubric-image {
     position: absolute;
     max-height: 10vh;
-    bottom: 5px;
-    left: 47.5%;
+    bottom: 2%;
+    left: 46%;
 }
 
-@media only screen and (max-width: 550px) {
-    .wrapper{
+@media (max-width: 800px) {
+    .wrapper {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
@@ -267,21 +262,5 @@ div.fake-footer {
         "aside"
         "footer"
         "fake-footer";
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    main, aside {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 748px) {
-    body {
-        overflow-x: hidden;
     }
 }
