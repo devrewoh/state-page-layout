@@ -12,13 +12,12 @@ header, nav, main, aside, footer, .fake-footer {
     min-width: 400px;
     height: 100vh;
     grid-template-columns: minmax(0, 7fr) minmax(0, 8fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
     "header header"
     "nav nav"
     "aside main"
-    "footer footer"
-    "fake-footer fake-footer";
+    "footer footer";
     grid-gap: 0.2rem;
     font-family:'Quicksand', Arial, sans-serif;
     font-weight: 800;
@@ -220,47 +219,16 @@ footer {
 .newsletter-form button:hover {
     background-color: #f4a261;
 }
-div.fake-footer {
-    background: goldenrod;
-}
-.fake-footer {
-    grid-area: fake-footer;
-    position: relative;
-}
-.fake-content {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 5px;
-}
-
-.fake-content p {
-    max-width: 100%;
-}
-
-.fake-content > ol {
-    float: right;
-}
-.fake-content > ol li {
-    margin-bottom: 5px;
-}
-
-#rubric-image {
-    position: absolute;
-    max-height: 27.5%;
-    bottom: 2%;
-    left: 46%;
-}
 
 @media (max-width: 800px) {
     .wrapper {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         grid-template-areas:
         "header"
         "nav"
         "main"
         "aside"
-        "footer"
-        "fake-footer";
+        "footer";
     }
 }
