@@ -237,6 +237,17 @@ div.fake-footer {
     max-width: 100%;
 }
 
+/* insert fake content list adjusstment*/
+.fake-content ol {
+    white-space: nowrap;
+    text-align: justify;
+    align-self: center;
+}
+
+.fake-content ol li {
+    text-transform: uppercase;
+}
+
 .fake-content > ol {
     float: right;
 }

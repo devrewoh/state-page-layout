@@ -134,13 +134,13 @@ div > .img-container {
     max-width: 85%;
 }
 
-main ul {
+main ul, main ol {
     white-space: nowrap;
     text-align: justify;
     align-self: center;
 }
 
-main ul li {
+main ul li, main ol li {
     text-transform: uppercase;
 }
 
