@@ -123,23 +123,23 @@ footer {
     background: #e76f51;
     grid-area: footer;
 }
-.newsletter-form input,
-.newsletter-form textarea {
+.newsletter-form-container input,
+.newsletter-form-container textarea {
     width: 95%;
 }
-.newsletter-form form {
+.newsletter-form-container form {
     max-width: 95%;
     width: 95%;
     margin: 0 auto;
 }
-.newsletter-form button {
+.newsletter-form-container button {
     background-color: #e76f51;
     color: white;
     padding: 0.25em 1em;
     border-radius: .5rem;
     cursor: pointer;
 }
-.newsletter-form button:hover {
+.newsletter-form-container button:hover {
     background-color: #f4a261;
 }
 @media (min-width: 768px) {
@@ -164,11 +164,11 @@ footer {
     }
 }
 @media (min-width: 1025px) {
-    .newsletter-form input,
-    .newsletter-form textarea {
+    .newsletter-form-container input,
+    .newsletter-form-container textarea {
     width: 100%;
     }
-    .newsletter-form form {
+    .newsletter-form-container form {
     max-width: 65%;
     width: 65%;
     margin: 0 auto;
