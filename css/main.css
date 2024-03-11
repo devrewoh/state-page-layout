@@ -65,7 +65,7 @@ nav a:hover {
     background-color: #f4a261;
     font-weight: bold;
 }
-main {
+section {
     background: #2a9d8f;
     grid-area: main;   
 }
@@ -85,11 +85,11 @@ div.img-container {
     max-width: 95%;
     height: auto;
 }
-main ul {
+section ul {
     width: 80%;
     margin: 1rem auto;
 }
-main ul li {
+section ul li {
     text-transform: uppercase;
 }
 aside {
@@ -164,11 +164,18 @@ div.fake-footer {
     text-transform: uppercase;
     margin-left: 1rem;
 }
-.absolute {
+.parent-relative {
     position: relative;
+    padding: 4rem;
 }
-#item-absolute {
+#child-absolute {
     max-height: 12vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom:  0;
+    left:  0;
+    margin: 1rem auto;
 }
 
 @media (min-width: 768px) {

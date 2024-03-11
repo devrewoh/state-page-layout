@@ -64,7 +64,7 @@ nav a:hover {
     background-color: #f4a261;
     font-weight: bold;
 }
-main {
+section {
     background: #2a9d8f;
     grid-area: main;   
 }
@@ -84,11 +84,11 @@ div.img-container {
     max-width: 95%;
     height: auto;
 }
-main ul, main ol {
+section ul, section ol {
     width: 80%;
     margin: 1rem auto;
 }
-main ul li {
+section ul li {
     text-transform: uppercase;
 }
 aside {
